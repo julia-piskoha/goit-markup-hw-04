@@ -123,7 +123,6 @@ body {
 .header-item {
 }
 
-.header-info,
 .header-link {
   font-weight: 500;
   font-size: 14px;
@@ -133,13 +132,12 @@ body {
 }
 .header-info {
   margin-left: auto;
+  display: flex;
+  align-items: center;
 }
 .header-icon {
   fill: currentColor;
-}
-
-.header-post {
-  margin-right: 30px;
+  margin-right: 10px;
 }
 
 .header-link:hover,
@@ -160,16 +158,21 @@ body {
   color: var(--accent-color);
 }
 .header-post {
+  margin-right: 30px;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--main-grey-color);
+  display: flex;
+  align-items: center;
 }
 .header-tel {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--main-grey-color);
+  display: flex;
+  align-items: center;
 }
 
 /* -------------MAIN------------------ */
@@ -189,6 +192,9 @@ body {
       rgba(47, 48, 58, 0.4)
     ),
     url(../img/hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .hero-title {
@@ -220,7 +226,6 @@ body {
 }
 
 .benefits-list {
-  margin-top: 30px;
   background-color: var(--main-white-color);
   display: flex;
   column-gap: 30px;
@@ -232,10 +237,7 @@ body {
   max-width: 270px;
   text-align: left;
 }
-.benefits-img-list {
-  display: flex;
-  column-gap: 30px;
-}
+
 .benefits-img {
   display: flex;
   width: 270px;
@@ -260,6 +262,7 @@ body {
   line-height: 1.14;
   text-transform: uppercase;
   color: var(--title-text-color);
+  margin-top: 30px;
 }
 
 /* -------------Work People------------------ */
@@ -323,21 +326,19 @@ body {
   width: 44px;
   height: 44px;
   border-radius: 50%;
+  color: var(--social-link-color);
   background-color: var(--main-white-color);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .people-soc-icon {
-  fill: var(--social-link-color);
+  fill: currentColor;
 }
 .people-soc-link:hover,
 .people-soc-link:focus {
   background-color: var(--accent-color);
-}
-.people-soc-link:hover .people-soc-icon,
-.people-soc-link:focus .people-soc-icon {
-  fill: var(--main-white-color);
+  color: var(--main-white-color);
 }
 
 .clients {
@@ -361,23 +362,19 @@ body {
   height: 92px;
   border: 1px solid var(--social-link-color);
   border-radius: 4px;
-  background-color: var(--main-white-color);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .clients-logo-icon {
-  fill: var(--social-link-color);
+  fill: currentColor;
 }
 
 .clients-logo-link:hover,
 .clients-logo-link:focus {
   border: 1px solid var(--accent-color);
-}
-.clients-logo-link:hover .clients-logo-icon,
-.clients-logo-link:focus .clients-logo-icon {
-  fill: var(--accent-color);
+  color: var(--accent-color);
 }
 
 /* -------------FOOTER------------------ */
@@ -449,10 +446,10 @@ body {
 }
 .footer-container {
   display: flex;
-  column-gap: 70px;
   align-items: baseline;
 }
 .footer-soc-wrap {
+  margin-left: 70px;
 }
 .footer-title {
   font-size: 14px;
@@ -490,6 +487,8 @@ body {
 .filter-btn:focus {
   color: var(--main-white-color);
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .cards {
   font-size: 18px;
@@ -500,15 +499,17 @@ body {
   flex-wrap: wrap;
 }
 .cards-item {
+  display: flex;
   margin-right: 30px;
   margin-bottom: 30px;
   width: 370px;
 }
-.box:hover,
-.box:focus {
+.cards-link:hover,
+.cards-link:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .cards-link {
+  display: block;
 }
 .text-container {
   border: 1px solid #eeeeee;
